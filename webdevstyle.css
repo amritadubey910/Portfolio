@@ -1,0 +1,280 @@
+/* Base Reset & Variables */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #333333;
+    background-color: #f8f9fa;
+    line-height: 1.6;
+}
+
+/* 1. Header & Navigation (Flexbox Layout) */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0056b3;
+    padding: 1rem 3.5rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 0.5rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #ffd700;
+}
+
+/* 2. Hero Section (Flexbox Layout & Keyframe Animation) */
+.hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 10vw;
+    background-color: #ffffff;
+    min-height: 60vh;
+}
+
+.hero-text {
+    flex: 1;
+    padding-right: 2rem;
+}
+
+.hero-text h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #222222;
+}
+
+/* Keyframe Color-Changing Animation */
+@keyframes colorChange {
+    0% { color: #ff5722; }
+    33% { color: #e91e63; }
+    66% { color: #9c27b0; }
+    100% { color: #ff5722; }
+}
+
+.animated-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin: 0.5rem 0;
+    animation: colorChange 4s infinite linear;
+}
+
+.hero-text p {
+    font-size: 1rem;
+    color: #666666;
+}
+
+.hero-image {
+    flex: 1;
+    max-width: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Common Section Layout */
+.section-container {
+    padding: 3rem 10vw;
+    background-color: #ffffff;
+}
+
+.section-container:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+.section-container h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: #111111;
+}
+
+/* 3. CSS Grid Layouts (Skills & Projects) */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.skill-card {
+    background-color: #0056b3;
+    color: #ffffff;
+    padding: 1.5rem;
+    text-align: center;
+    border-radius: 6px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.skill-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.3rem;
+}
+
+.skill-card p {
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.project-card {
+    background-color: #ffffff;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    padding: 3rem 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.project-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: 0.4rem;
+}
+
+.project-card p {
+    font-size: 0.9rem;
+    color: #555555;
+}
+
+/* 4. Contact Form */
+.form-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5rem;
+}
+
+.contact-form {
+    background-color: #f1f5f9;
+    padding: 2rem;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 450px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.form-group {
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-size: 0.85rem;
+    margin-bottom: 0.3rem;
+    color: #333;
+}
+
+.form-group input,
+.form-group textarea {
+    padding: 0.6rem;
+    border: 1px solid #0056b3;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    outline: none;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #0056b3;
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.submit-btn:hover {
+    background-color: #003d80;
+    transform: scale(1.02);
+}
+
+/* 5. Footer Layout */
+.footer {
+    background-color: #0056b3;
+    color: #ffffff;
+    text-align: center;
+    padding: 1.2rem;
+    font-size: 0.85rem;
+    position: relative;
+}
+
+.back-to-top {
+    display: inline-block;
+    margin-top: 0.6rem;
+    background-color: #003d80;
+    color: #ffffff;
+    padding: 0.4rem 0.8rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    transition: background-color 0.3s ease;
+}
+
+.back-to-top:hover {
+    background-color: #002244;
+}
+
+/* 6. Responsive Design (Media Queries) */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 0.8rem;
+        padding: 1rem;
+    }
+
+    .hero-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 2.5rem 5vw;
+    }
+
+    .hero-text {
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+}

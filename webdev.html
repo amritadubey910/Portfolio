@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Personal Portfolio Website</title>
+    <link rel="stylesheet" href="./webdevstyle.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="navbar">
+        <div class="logo">My Portfolio</div>
+        <nav class="nav-links">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-text">
+                <h1>Hi, I am</h1>
+                <h2 class="animated-title">Full Stack Developer</h2>
+                <p>Building modern web applications with MERN stack.</p>
+            </div>
+           <img src="https://tse1.explicit.bing.net/th/id/OIP.ANRzoC6oMjkRYBGM9dDjAAHaHk?r=0&rs=1&pid=ImgDetMain&o=7&rm=3" alt="">
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="section-container">
+            <h2>About Me</h2>
+            <p>Hello! My name is John Doe, and I am currently learning web development. This is my first portfolio website where I showcase my passion for creating interactive and responsive web pages. I am a student at KR Mangalam University, pursuing a B.Tech degree, and I am deeply interested in technology and coding. I love exploring new skills every day, and I always aim to improve my knowledge in the field of web development. With a hardworking and consistent mindset, I am determined to grow as a developer and build creative projects that make a real impact.</p>
+        </section>
+
+        <!-- My Skills Section -->
+        <section id="skills" class="section-container">
+            <h2>My Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <h3>HTML</h3>
+                    <p>Beginner</p>
+                </div>
+                <div class="skill-card">
+                    <h3>CSS</h3>
+                    <p>Beginner</p>
+                </div>
+                <div class="skill-card">
+                    <h3>JavaScript</h3>
+                    <p>Learning</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- My Projects Section -->
+        <section id="projects" class="section-container">
+            <h2>My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Project 1</h3>
+                    <p>A simple HTML & CSS webpage.</p>
+                </div>
+                <div class="project-card">
+                    <h3>Project 2</h3>
+                    <p>Another awesome mini project.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Me Section -->
+        <section id="contact" class="section-container">
+            <h2>Contact Me</h2>
+            <div class="form-wrapper">
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" id="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message:</label>
+                        <textarea id="message" rows="3" placeholder="Write your message" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-btn">Send</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <p> 2025 John Doe. All rights reserved.</p>
+        <a href="#" class="back-to-top">↑ Back to Top</a>
+    </footer>
+
+</body>
+</html>
